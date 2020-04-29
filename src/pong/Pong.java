@@ -68,10 +68,12 @@ public class Pong implements ActionListener, KeyListener {
 
     /**Sets the game field */
     public void render(Graphics2D g) {
-        g.setColor(Color.BLACK);
+        Color background = new Color(0, 103, 9); //create new color
+        g.setColor(background); // set background color
         g.fillRect(0, 0, width, height);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         if (gameStatus == 0){
+
             g.setColor(Color.WHITE);
             g.setFont(new Font("Arial", 1, 50));
             g.drawString("Pong" , width/2 - 70,height / 2 - 120);
